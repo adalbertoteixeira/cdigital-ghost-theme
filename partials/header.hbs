@@ -1,0 +1,12 @@
+<div class="row header">
+  <div class="small-4 medium-3 columns">
+    {{#if @blog.logo}}
+      <a class="blog-logo" href="{{@blog.url}}">
+        <img src="{{@blog.logo}}" alt="{{@blog.title}}" />
+      </a>
+    {{/if}}
+  </div>
+  <div class="small-6 medium-9 columns">
+    {{navigation}}
+  </div>
+</div>

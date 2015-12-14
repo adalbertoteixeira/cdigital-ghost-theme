@@ -1,0 +1,28 @@
+.orbit--cdigital {
+  position: relative;
+  height: 100%;
+  .orbit--container {
+    position: relative;
+    height: 100%;
+    .orbit-slide {
+      position: relative;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      max-height: none !important;
+      height: 100%;
+      .orbit-slide__title {
+        position: absolute;
+      }
+      .orbit-slide__excerpt {
+        position: absolute;
+      }
+    }
+  }
+  .orbit-bullets {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0rem;
+  }
+}

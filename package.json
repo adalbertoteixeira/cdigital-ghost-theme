@@ -1,0 +1,17 @@
+{
+  "name": "distopia",
+  "version": "1.0.0",
+  "devDependencies": {
+    "browser-sync": "^2.10.0",
+    "foundation-sites": "^6.0.5",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^6.1.1",
+    "gulp-sass": "^2.1.0",
+    "motion-ui": "^1.1.1"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  }
+}

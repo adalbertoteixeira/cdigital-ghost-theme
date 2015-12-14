@@ -1,0 +1,29 @@
+.header {
+  margin-top: 2rem;
+
+  .blog-logo {
+    width: 100%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .menu {
+    float: left;
+    width: 100%;
+    padding: 1em 0;
+    background-color: $yellow;
+    list-style: none;
+    text-align: center;
+    li {
+      display: inline-block;
+      a {
+        font-family: Fruttiger,Verdana,sans-serif;
+        text-transform: uppercase;
+        color: black;
+      }
+    }
+  }
+
+}

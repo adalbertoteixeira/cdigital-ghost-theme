@@ -1,0 +1,67 @@
+.teasers-block {
+  .teasers-block--title {
+    @include block-title;
+  }
+  .teasers-block--post {
+    .teasers-block--post--post-header {
+      .teasers-block--post--post-header---title {
+        font-family: Fruttiger,Verdana,sans-serif;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 0.9rem;
+        a {
+          color: black;
+        }
+      }
+    }
+    .teasers-block--post--post-image--wrapper {
+      float: left;
+      width: 30%;
+      margin-right: 0.5rem;
+      margin-bottom: 0; // 0.5em;
+      .teasers-block--post--post-image--link {
+        .teasers-block--post--post-image--image {
+          opacity: 0.5;
+          border-radius: 25%;
+          -moz-transition-property: opacity,border-radius;
+          -webkit-transition-property: opacity,border-radius;
+          -o-transition-property: opacity,border-radius;
+          transition-property: opacity,border-radius;
+          -moz-transition-duration: 1s,1s;
+          -webkit-transition-duration: 1s,1s;
+          -o-transition-duration: 1s,1s;
+          transition-duration: 1s,1s;
+          &:hover {
+            opacity: 1;
+            border-radius: 5%;
+          }
+        }
+      }
+    }
+
+    .teasers-block--post--post-date {
+      display: block;
+      font-family: Fruttiger,Verdana,sans-serif;
+      font-weight: lighter;
+      margin: 0;
+      font-size: 0.8em;
+      color: silver;
+      line-height: 1;
+    }
+
+    .teasers-block--post--post-excerpt {
+      font-family: Verdana, Arial, sans-serif;
+      font-weight: lighter;
+      margin: 0;
+      font-size: 0.75rem;
+      line-height: 1.2;
+    }
+
+    .teasers-block--post--read-more {
+      float: left;
+      width: 100%;
+      margin: 0.5rem 0 1rem 0;
+      @include read-more-link;
+    }
+  }
+}

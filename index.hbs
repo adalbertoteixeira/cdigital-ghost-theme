@@ -1,0 +1,92 @@
+{{!< default}}
+
+{{! The tag above means - insert everything in this file into the {body} of the default.hbs template }}
+
+{{! The big featured header }}
+<header class="main-header {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
+  <div class="vertical">
+    <div class="main-header-content inner">
+        {{#get "posts" limit="5" fields="title, image, language" filter="featured:true"}}
+        <div class="orbit orbit--cdigital" role="region" aria-label="Favorite Space Pictures">
+          
+          <ul class="orbit-container orbit--container">
+            <button class="orbit-previous" aria-label="previous"><span class="show-for-sr">Previous Slide</span>&#9664;</button>
+            <button class="orbit-next" aria-label="next"><span class="show-for-sr">Next Slide</span>&#9654;</button>
+            {{#foreach posts}}
+              <li class="{{#if @first}}is-active {{/if}}orbit-slide" style="background-image: url({{image}})">
+                <div class="orbit-slide__title">
+                  {{title}}
+                </div>
+                <div class="orbit-slide__excerpt">
+                  {{excerpt words="26"}}
+                </div>
+              </li>
+            {{/foreach}}
+          </ul>
+          <nav class="orbit-bullets">
+            {{#foreach posts}}
+              <button class="is-active" data-slide="{{@index}}">
+                <span class="show-for-sr">First slide details.</span><span class="show-for-sr">Current Slide</span>
+              </button>
+            {{/foreach}}
+          </nav>
+
+        </div>
+        {{/get}}
+      </div>
+    </div>
+
+    {{!-- <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a> --}}
+</header>
+
+{{! The main content area on the homepage }}
+<main id="content" class="content small-12 columns" role="main">
+
+    <div class="row">
+
+      <div class="small-12 columns">
+
+          <div class="row">
+            <div class="small-12 columns">
+              <div class=""></div>
+            </div>
+            <div class="small-12 columns">
+              <div class="teasers-block">
+                <h2 class="teasers-block--title">Notícias</h2>
+                <div class="row">
+                {{#foreach posts}}
+                      <article class="teasers-block--post teasers-block--post--{{post_class}} small-12 medium-4 large-3 columns">
+                          <header class="teasers-block--post--post-header">
+                              <h2 class="teasers-block--post--post-header---title">
+                                <a href="{{url}}">{{{title}}}</a>
+                              </h2>
+                          </header>
+                          <section class="post-excerpt">
+                            {{#if image}}
+                              <div class="teasers-block--post--post-image--wrapper">
+                                <a href="{{url}}" class="teasers-block--post--post-image--link">
+                                  <img src="{{image}}" alt="{{title}}" class="teasers-block--post--post-image--image">
+                                </a>
+                              </div>
+                            {{/if}}
+
+                            <time class="teasers-block--post--post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+                            <p class="teasers-block--post--post-excerpt">{{excerpt words="26"}}</p>
+                            <div class="teasers-block--post--read-more">
+                              <a href="{{url}}">Ler mais</a>
+                            </div>
+                          </section>
+                      </article>
+                {{/foreach}}
+                </div>
+              </div>
+
+            </div>
+
+        </div>
+      </div>
+      
+
+    </div>
+
+</main>
