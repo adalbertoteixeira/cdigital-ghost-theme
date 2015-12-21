@@ -5454,6 +5454,12 @@ table.hover tr:nth-of-type(even):hover {
 
 .post--content {
   font-family: Fruttiger,Verdana,Arial,sans-serif; }
+  .post--content a {
+    font-weight: bold;
+    color: maroon;
+    text-decoration: underline; }
+    .post--content a:hover {
+      color: black; }
 
 .post__footer {
   float: left;

@@ -85,18 +85,18 @@
   <div class="teasers-block">
   <h2 class="teasers-block--title">Notícias</h2>
   <div class="row">
-    {{#get "posts" limit="4" fields="title, image, language, slug, html"}}
+    {{#get "posts" limit="4" fields="title, image, language, slug, html, url"}}
     {{#foreach posts}}
     <article class="teasers-block--post small-12 columns">
         <header class="teasers-block--post--post-header">
             <h2 class="teasers-block--post--post-header---title">
-              <a href="{{url}}">{{{title}}}</a>
+              <a href="/{{slug}}">{{{title}}}</a>
             </h2>
         </header>
         <section class="post-excerpt">
           {{#if image}}
             <div class="teasers-block--post--post-image--wrapper">
-              <a href="{{url}}" class="teasers-block--post--post-image--link">
+              <a href="/{{slug}}" class="teasers-block--post--post-image--link">
                 <img src="{{image}}" alt="{{title}}" class="teasers-block--post--post-image--image">
               </a>
             </div>
@@ -105,7 +105,7 @@
           <time class="teasers-block--post--post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
           <p class="teasers-block--post--post-excerpt">{{excerpt words="26"}}</p>
           <div class="teasers-block--post--read-more">
-            <a href="{{url}}">Ler mais</a>
+            <a href="/{{slug}}">Ler mais</a>
           </div>
         </section>
     </article>
