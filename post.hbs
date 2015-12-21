@@ -79,13 +79,14 @@
 
     </article>
 </main>
-
+{{/post}}
 
 <aside class="post--read-next small-12 medium-3 medium-push-1 columns">
   <div class="teasers-block">
   <h2 class="teasers-block--title">Notícias</h2>
   <div class="row">
-    {{#next_post}}
+    {{#get "posts" limit="4" fields="title, image, language, slug, html"}}
+    {{#foreach posts}}
     <article class="teasers-block--post small-12 columns">
         <header class="teasers-block--post--post-header">
             <h2 class="teasers-block--post--post-header---title">
@@ -108,47 +109,10 @@
           </div>
         </section>
     </article>
-    {{!-- <a class="read-next-story {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
-        <section class="post">
-            <h2>{{title}}</h2>
-            <p>{{excerpt words="19"}}&hellip;</p>
-        </section>
-    </a> --}}
-    {{/next_post}}
-    {{#prev_post}}
-
-    <article class="teasers-block--post teasers-block--post--{{post_class}} small-12 columns">
-        <header class="teasers-block--post--post-header">
-            <h2 class="teasers-block--post--post-header---title">
-              <a href="{{url}}">{{{title}}}</a>
-            </h2>
-        </header>
-        <section class="post-excerpt">
-          {{#if image}}
-            <div class="teasers-block--post--post-image--wrapper">
-              <a href="{{url}}" class="teasers-block--post--post-image--link">
-                <img src="{{image}}" alt="{{title}}" class="teasers-block--post--post-image--image">
-              </a>
-            </div>
-          {{/if}}
-
-          <time class="teasers-block--post--post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
-          <p class="teasers-block--post--post-excerpt">{{excerpt words="26"}}</p>
-          <div class="teasers-block--post--read-more">
-            <a href="{{url}}">Ler mais</a>
-          </div>
-        </section>
-    </article>
-
-    {{!-- <a class="read-next-story prev {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
-        <section class="post">
-            <h2>{{title}}</h2>
-            <p>{{excerpt words="19"}}&hellip;</p>
-        </section>
-    </a> --}}
-    {{/prev_post}}
+      {{/foreach}}
+    {{/get}}
   </div>
   </div>
 </aside>
 
-{{/post}}
+
