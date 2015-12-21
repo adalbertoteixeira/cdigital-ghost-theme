@@ -30,13 +30,15 @@ gulp.task('sass:watch', function () {
 // });
 
 gulp.task('browser-sync', function() {
-    browserSync.init({
-        open: false,
-        proxy: "http://localhost:2368/",
-        port: 2369,
-    });
+  browserSync.init({
+      open: false,
+      proxy: "http://localhost:2368/",
+      port: 2369,
+  });
 
-    gulp.watch(['*.hbs', '**/*.hbs']).on("change", browserSync.reload);
+  gulp.watch(['*.hbs', '**/*.hbs']).on("change", browserSync.reload);
 });
 
 gulp.task('default', ['sass:watch', 'browser-sync']);
+
+gulp.task('build', ['sass']);
