@@ -6,7 +6,7 @@
 <header class="main-header {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
   <div class="vertical">
     <div class="main-header-content">
-        {{#get "posts" limit="5" fields="title, image, language, slug, url, excerpt" filter="featured:true"}}
+        {{#get "posts" limit="8" fields="title, image, language, slug, url, excerpt" filter="featured:true"}}
         <div class="orbit orbit--cdigital" role="region" aria-label="Favorite Space Pictures">
           
           <ul class="orbit-container orbit--container">

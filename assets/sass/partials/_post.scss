@@ -41,7 +41,15 @@
   }
 }
 .post--content {
-  font-family: Fruttiger,Verdana,Arial,sans-serif;  
+  font-family: Fruttiger,Verdana,Arial,sans-serif;
+  a {
+    font-weight: bold;
+    color: maroon;
+    text-decoration: underline;
+    &:hover {
+      color: black;
+    }
+  }
 }
 
 .post__footer {
