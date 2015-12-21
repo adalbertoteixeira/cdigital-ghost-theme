@@ -13,9 +13,31 @@
       height: 100%;
       .orbit-slide__title {
         position: absolute;
+        bottom: 18%;
+        left: 2%;
+        background-color: rgba(0,0,0,0.6);
+        padding: 1em;
+        width: 80%;
+        color: white;
+        text-align: left;
+        text-decoration: none;
+        font-size: 1.2em;
+        line-height: 1.2em;
+        text-transform: uppercase;
+        a {
+          color: white;
+          &:hover {
+            color: gray;
+          }
+        }
       }
-      .orbit-slide__excerpt {
+      .orbit-slide__read-more-link {
         position: absolute;
+        bottom: 5%;
+        // padding: 0.2em 1em;
+        // background-color: rgb(255,234,151);
+        left: 2%;
+        @include read-more-link;
       }
     }
   }

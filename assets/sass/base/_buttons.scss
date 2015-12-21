@@ -8,8 +8,8 @@
     font-style: italic;
     font-size: 0.7rem;
     text-transform: uppercase;
-    &:before {
-      content: "# ";
+    &:hover {
+      color: #df3d82;
     }
   }
 }
