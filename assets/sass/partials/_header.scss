@@ -26,4 +26,20 @@
     }
   }
 
+  .title-bar {
+    background-color: $yellow;
+  }
+  .title-bar-title {
+    font-weight: normal;
+    font-family: Fruttiger, Verdana, sans-serif;
+    text-transform: uppercase;
+    color: black;
+    line-height: 1;
+    vertical-align: -0.1rem;
+  }
+
+  .menu-icon:after {
+    background: black;
+    box-shadow: 0 7px 0 black, 0 14px 0 black;
+  }
 }
