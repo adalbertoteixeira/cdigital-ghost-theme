@@ -4878,16 +4878,27 @@ table.hover tr:nth-of-type(even):hover {
     .header .blog-logo img {
       width: 100%;
       height: auto; }
-  .header .menu {
+  .header .dropdown.menu {
     float: left;
     width: 100%;
     padding: 1em 0;
     background-color: #ffea97;
     list-style: none;
     text-align: center; }
-    .header .menu li {
+    @media screen and (min-width: 0em) and (max-width: 39.9375em) {
+      .header .dropdown.menu {
+        position: absolute;
+        margin-top: 2rem;
+        z-index: 9999; } }
+    .header .dropdown.menu li {
       display: inline-block; }
-      .header .menu li a {
+      @media screen and (min-width: 0em) and (max-width: 39.9375em) {
+        .header .dropdown.menu li {
+          width: 50%;
+          display: block;
+          float: left;
+          text-align: left; } }
+      .header .dropdown.menu li a {
         font-family: Fruttiger,Verdana,sans-serif;
         text-transform: uppercase;
         color: black; }
@@ -5004,6 +5015,7 @@ table.hover tr:nth-of-type(even):hover {
   text-align: justify;
   line-height: 1.5em;
   letter-spacing: -0.07em;
+  font-size: 2.5rem;
   font-weight: normal;
   font-family: Fruttiger,Verdana,Arial,sans-serif; }
 
@@ -5032,21 +5044,29 @@ table.hover tr:nth-of-type(even):hover {
     border-radius: 5%;
     border: 1px solid rgba(128, 128, 128, 0.5); }
 
-.post--content {
-  font-family: Fruttiger,Verdana,Arial,sans-serif; }
-  .post--content p {
-    font-size: inherit;
-    line-height: 1.9;
-    font-size: .8rem;
-    margin-bottom: 1rem;
-    text-rendering: optimizeLegibility;
-    font-family: Verdana, Arial, sans-serif; }
-  .post--content a {
-    font-weight: bold;
-    color: maroon;
-    text-decoration: underline; }
-    .post--content a:hover {
-      color: black; }
+.post--content h2 {
+  font-family: Fruttiger,Verdana,Arial,sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 1.5em 0px 0.5em 2em; }
+
+.post--content p {
+  font-size: inherit;
+  line-height: 1.9;
+  font-size: .8rem;
+  margin-bottom: 1rem;
+  text-rendering: optimizeLegibility;
+  font-family: Verdana, Arial, sans-serif;
+  margin: 0 0 1em 3em;
+  text-align: justify;
+  line-height: 1.9em; }
+
+.post--content a {
+  font-weight: bold;
+  color: maroon;
+  text-decoration: underline; }
+  .post--content a:hover {
+    color: black; }
 
 .post__footer {
   float: left;

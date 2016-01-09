@@ -9,15 +9,26 @@
     }
   }
 
-  .menu {
+  .dropdown.menu {
     float: left;
     width: 100%;
     padding: 1em 0;
     background-color: $yellow;
     list-style: none;
     text-align: center;
+    @include breakpoint(small only) {
+      position: absolute;
+      margin-top: 2rem;
+      z-index: 9999;
+    }
     li {
       display: inline-block;
+      @include breakpoint(small only) {
+        width: 50%;
+        display: block;
+        float: left;
+        text-align: left;
+      }
       a {
         font-family: Fruttiger,Verdana,sans-serif;
         text-transform: uppercase;

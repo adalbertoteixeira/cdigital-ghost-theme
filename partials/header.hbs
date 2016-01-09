@@ -1,4 +1,19 @@
-<div class="row header">
+<div class="row header show-for-small-only">
+  <div class="small-4 columns">
+    {{#if @blog.logo}}
+      <a class="blog-logo" href="{{@blog.url}}">
+        <img src="{{@blog.logo}}" alt="{{@blog.title}}" />
+      </a>
+    {{/if}}
+  </div>
+  <div class="title-bar small-8 columns" data-responsive-toggle="main-menu" data-hide-for="medium">
+    <button class="menu-icon" type="button" data-toggle></button>
+    <div class="title-bar-title">Menu</div>
+  </div>
+  {{navigation}}
+</div>
+
+<div class="row header show-for-medium align-middle">
   <div class="small-4 medium-3 columns">
     {{#if @blog.logo}}
       <a class="blog-logo" href="{{@blog.url}}">
@@ -6,7 +21,5 @@
       </a>
     {{/if}}
   </div>
-  <div class="small-6 medium-9 columns">
-    {{navigation}}
-  </div>
+  {{navigation}}
 </div>

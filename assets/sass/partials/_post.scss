@@ -5,6 +5,7 @@
   text-align: justify;
   line-height: 1.5em;
   letter-spacing: -0.07em;
+  font-size: 2.5rem;
   font-weight: normal;
   font-family: Fruttiger,Verdana,Arial,sans-serif;
 }
@@ -41,10 +42,18 @@
   }
 }
 .post--content {
+  h2 {
+    font-family: Fruttiger,Verdana,Arial,sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 1.5em 0px 0.5em 2em;
+  }
   p {
     @include blog-text;
+    margin: 0 0 1em 3em;
+    text-align: justify;
+    line-height: 1.9em;
   }
-  font-family: Fruttiger,Verdana,Arial,sans-serif;
   a {
     font-weight: bold;
     color: maroon;
