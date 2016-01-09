@@ -41,6 +41,10 @@
     border: 1px solid rgba(128, 128, 128, 0.5);
   }
 }
+.post--wrapper {
+  float: left;
+  width: 100%;
+}
 .post--content {
   h2 {
     font-family: Fruttiger,Verdana,Arial,sans-serif;
@@ -68,7 +72,7 @@
   float: left;
   width: 100%;
   margin: 2rem 0px 0px;
-  padding: 2rem 0px 0px;
+  padding: 2rem 0px 0px 3rem;
   border-top: 1px solid rgb(192, 192, 192);
   > section {
     // width: 50%;

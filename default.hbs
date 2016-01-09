@@ -32,8 +32,8 @@
         {{{body}}}
 
         <footer class="site-footer small-12 columns clearfix">
-            <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> {{date format="YYYY"}}</section>
-            <section class="poweredby"></section>
+            <section class="copyright small-6 columns"><a href="{{@blog.url}}">{{@blog.title}}</a> {{date format="YYYY"}}</section>
+            <section class="poweredby small-6 columns"></section>
         </footer>
 
     </div>
@@ -42,14 +42,11 @@
     {{ghost_foot}}
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/foundation.min.js"}}"></script>
-    {{! The main JavaScript file for Casper }}
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/cdigital.js"}}"></script>
     
-
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-51cd5ea324376783" async="async"></script>
+    {{> metrics}}
 
 </body>
 </html>

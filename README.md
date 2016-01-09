@@ -4,6 +4,16 @@ The default theme for [Ghost](http://github.com/tryghost/ghost/).
 
 To download, visit the [releases](https://github.com/TryGhost/Casper/releases) page.
 
+## Install
+
+## Dependencies
+
+`npm install`
+
+## Metrics partial file
+
+Create `partials/metrics.hbs` and add your Google Analytics, etc.
+
 ## Copyright & License
 
 Copyright (c) 2013-2015 Ghost Foundation - Released under the MIT License.

@@ -4861,14 +4861,9 @@ table.hover tr:nth-of-type(even):hover {
   border-bottom: #bbc7cc 1px solid; }
 
 .poweredby {
-  display: block;
-  width: 45%;
-  float: right;
   text-align: right; }
 
 .copyright {
-  display: block;
-  width: 45%;
   float: left; }
 
 .header {
@@ -5044,6 +5039,10 @@ table.hover tr:nth-of-type(even):hover {
     border-radius: 5%;
     border: 1px solid rgba(128, 128, 128, 0.5); }
 
+.post--wrapper {
+  float: left;
+  width: 100%; }
+
 .post--content h2 {
   font-family: Fruttiger,Verdana,Arial,sans-serif;
   font-size: 1.2rem;
@@ -5072,7 +5071,7 @@ table.hover tr:nth-of-type(even):hover {
   float: left;
   width: 100%;
   margin: 2rem 0px 0px;
-  padding: 2rem 0px 0px;
+  padding: 2rem 0px 0px 3rem;
   border-top: 1px solid silver; }
   .post__footer .post__footer__tags {
     float: left;

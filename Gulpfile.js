@@ -1,9 +1,11 @@
+'use strict';
+
 var gulp = require('gulp');
-// var watch = require('gulp-watch');
 var sass = require('gulp-sass');
 var babel = require("gulp-babel");
 var browserSync = require('browser-sync').create();
 var reload      = browserSync.reload;
+let fs = require('fs');
 
 gulp.task('sass', function () {
   gulp.src('./assets/sass/**/*.scss')
@@ -17,17 +19,38 @@ gulp.task('sass', function () {
 });
  
 gulp.task('sass:watch', function () {
-  gulp.watch('./assets/sass/**/*.scss', ['sass', browserSync.reload]);
+  gulp.watch('./assets/sass/**/*.scss', ['sass']);
 });
 
-// gulp.task('js:babel', function () {
-//   gulp.watch('./assets/js/**/*.js', ['js']);
-// });
-// gulp.task("js", function () {
-//   return gulp.src("./assets/js/app.js")
-//     .pipe(babel())
-//     .pipe(gulp.dest("./assets/build/js"));
-// });
+gulp.task('js:watch', function () {
+  gulp.watch('./assets/javascript/**/*.js', ['js']);
+});
+
+gulp.task("js", function () {
+  return gulp.src("./assets/javascript/**/*.js")
+    .pipe(babel())
+    .pipe(gulp.dest("./assets/js"));
+});
+
+gulp.task('dependencies', () => {
+  const files = [
+    {target: {
+      folder: './assets/js', file: 'foundation.min.js'
+    }, origin: './node_modules/foundation-sites/dist/foundation.min.js'},
+  ];
+
+  files.forEach((file) => {
+    fs.stat(`${file.target.folder}/${file.target.file}`, function(err, stat) {
+      if(err == null) {
+          console.log('File exists');
+      } else {
+        gulp.src(file.origin)
+          .pipe(gulp.dest(file.target.folder));
+      }
+    });
+  });
+
+});
 
 gulp.task('browser-sync', function() {
   browserSync.init({
@@ -36,9 +59,9 @@ gulp.task('browser-sync', function() {
       port: 2369,
   });
 
-  gulp.watch(['*.hbs', '**/*.hbs']).on("change", browserSync.reload);
+  gulp.watch(['*.hbs', '**/*.hbs', './assets/css/**/*.css', './assets/js/*.*']).on("change", browserSync.reload);
 });
 
-gulp.task('default', ['sass:watch', 'browser-sync']);
+gulp.task('default', ['dependencies', 'sass:watch', 'js:watch', 'browser-sync']);
 
-gulp.task('build', ['sass']);
+gulp.task('build', ['dependencies', 'sass', 'js']);
