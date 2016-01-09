@@ -41,6 +41,9 @@
   }
 }
 .post--content {
+  p {
+    @include blog-text;
+  }
   font-family: Fruttiger,Verdana,Arial,sans-serif;
   a {
     font-weight: bold;

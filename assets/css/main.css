@@ -4922,11 +4922,21 @@ table.hover tr:nth-of-type(even):hover {
     color: black; }
 
 .teasers-block .teasers-block--post .teasers-block--post--post-image--wrapper {
+  position: relative;
   float: left;
   width: 30%;
+  height: 0;
+  padding-top: 30%;
   margin-right: 0.5rem;
   margin-bottom: 0; }
-  .teasers-block .teasers-block--post .teasers-block--post--post-image--wrapper .teasers-block--post--post-image--link .teasers-block--post--post-image--image {
+  .teasers-block .teasers-block--post .teasers-block--post--post-image--wrapper .teasers-block--post--post-image--link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center center;
     opacity: 0.5;
     border-radius: 25%;
     -moz-transition-property: opacity,border-radius;
@@ -4937,9 +4947,23 @@ table.hover tr:nth-of-type(even):hover {
     -webkit-transition-duration: 1s,1s;
     -o-transition-duration: 1s,1s;
     transition-duration: 1s,1s; }
-    .teasers-block .teasers-block--post .teasers-block--post--post-image--wrapper .teasers-block--post--post-image--link .teasers-block--post--post-image--image:hover {
+    .teasers-block .teasers-block--post .teasers-block--post--post-image--wrapper .teasers-block--post--post-image--link:hover {
       opacity: 1;
       border-radius: 5%; }
+    .teasers-block .teasers-block--post .teasers-block--post--post-image--wrapper .teasers-block--post--post-image--link .teasers-block--post--post-image--image {
+      opacity: 0.5;
+      border-radius: 25%;
+      -moz-transition-property: opacity,border-radius;
+      -webkit-transition-property: opacity,border-radius;
+      -o-transition-property: opacity,border-radius;
+      transition-property: opacity,border-radius;
+      -moz-transition-duration: 1s,1s;
+      -webkit-transition-duration: 1s,1s;
+      -o-transition-duration: 1s,1s;
+      transition-duration: 1s,1s; }
+      .teasers-block .teasers-block--post .teasers-block--post--post-image--wrapper .teasers-block--post--post-image--link .teasers-block--post--post-image--image:hover {
+        opacity: 1;
+        border-radius: 5%; }
 
 .teasers-block .teasers-block--post .teasers-block--post--post-date {
   display: block;
@@ -5010,6 +5034,13 @@ table.hover tr:nth-of-type(even):hover {
 
 .post--content {
   font-family: Fruttiger,Verdana,Arial,sans-serif; }
+  .post--content p {
+    font-size: inherit;
+    line-height: 1.9;
+    font-size: .8rem;
+    margin-bottom: 1rem;
+    text-rendering: optimizeLegibility;
+    font-family: Verdana, Arial, sans-serif; }
   .post--content a {
     font-weight: bold;
     color: maroon;

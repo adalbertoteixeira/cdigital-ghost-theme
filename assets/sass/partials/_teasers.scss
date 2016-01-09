@@ -15,11 +15,38 @@
       }
     }
     .teasers-block--post--post-image--wrapper {
+      position: relative;
       float: left;
       width: 30%;
+      height: 0;
+      padding-top: 30%;
       margin-right: 0.5rem;
       margin-bottom: 0; // 0.5em;
       .teasers-block--post--post-image--link {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-size: cover;
+        background-position: center center;
+
+        opacity: 0.5;
+        border-radius: 25%;
+        -moz-transition-property: opacity,border-radius;
+        -webkit-transition-property: opacity,border-radius;
+        -o-transition-property: opacity,border-radius;
+        transition-property: opacity,border-radius;
+        -moz-transition-duration: 1s,1s;
+        -webkit-transition-duration: 1s,1s;
+        -o-transition-duration: 1s,1s;
+        transition-duration: 1s,1s;
+
+        &:hover {
+          opacity: 1;
+          border-radius: 5%;
+        }
+
         .teasers-block--post--post-image--image {
           opacity: 0.5;
           border-radius: 25%;

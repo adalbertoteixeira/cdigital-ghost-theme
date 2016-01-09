@@ -19,6 +19,15 @@
   font-style: normal;
 }
 
+@mixin blog-text {
+  font-size: inherit;
+  line-height: 1.9;
+  font-size: .8rem;
+  margin-bottom: 1rem;
+  text-rendering: optimizeLegibility;
+  font-family: Verdana, Arial, sans-serif;
+}
+
 @mixin block-title {
   border-bottom: 1px solid silver;
   margin: 0 0 0.5rem 0;
