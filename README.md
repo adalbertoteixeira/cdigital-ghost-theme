@@ -2,7 +2,7 @@
 
 A [Ghost](http://github.com/tryghost/ghost/) based on [releases](https://github.com/TryGhost/Casper/releases) using [Foundation](http://foundation.zurb.com/).
 
-Demo in [http://cdigital.pt/](http://cdigital.pt/).
+Demo in [cdigital.pt](http://cdigital.pt/).
 ## Install
 
 ### Dependencies
