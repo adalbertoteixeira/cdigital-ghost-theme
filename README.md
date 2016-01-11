@@ -4,11 +4,11 @@ A [Ghost](http://github.com/tryghost/ghost/) based on [releases](https://github.
 
 ## Install
 
-## Dependencies
+### Dependencies
 
 `npm install`
 
-## Metrics partial file
+### Metrics partial file
 
 Create `partials/metrics.hbs` and add your code for  Google Analytics, etc.
 
@@ -16,9 +16,13 @@ Create `partials/metrics.hbs` and add your code for  Google Analytics, etc.
 
 By running `gulp`.
 
-## Use it
+### Use it
 
 By running `gulp build`.
+
+## @TODO
+
+- Clean up comments in jade files
 
 ## Copyright & License
 
