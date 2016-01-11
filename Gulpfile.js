@@ -49,7 +49,6 @@ gulp.task('dependencies', () => {
       }
     });
   });
-
 });
 
 gulp.task('browser-sync', function() {
