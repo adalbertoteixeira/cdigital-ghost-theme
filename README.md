@@ -3,6 +3,9 @@
 A [Ghost](http://github.com/tryghost/ghost/) based on [releases](https://github.com/TryGhost/Casper/releases) using [Foundation](http://foundation.zurb.com/).
 
 Demo in [cdigital.pt](http://cdigital.pt/).
+
+![cdigital website](https://github.com/adalbertoteixeira/cdigital-ghost-theme/cdigital_ghost_theme.jpg "cdigital website")
+
 ## Install
 
 ### Dependencies
