@@ -4,7 +4,7 @@ A [Ghost](http://github.com/tryghost/ghost/) based on [releases](https://github.
 
 Demo in [cdigital.pt](http://cdigital.pt/).
 
-![cdigital website](https://github.com/adalbertoteixeira/cdigital-ghost-theme/cdigital_ghost_theme.jpg "cdigital website")
+![cdigital website](/cdigital_ghost_theme.jpg?raw=true "cdigital website")
 
 ## Install
 
