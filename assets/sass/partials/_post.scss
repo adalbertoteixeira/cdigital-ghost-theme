@@ -87,3 +87,14 @@
     float: left;
   }
 }
+
+pre {
+  margin: 0 0 1rem 3rem;
+  width: calc(100% - 3rem);
+  padding: 1rem;
+  font-size: .8rem;
+  code {
+    margin: 0 5rem 0 0;
+    display: inline-block;
+  }
+}
