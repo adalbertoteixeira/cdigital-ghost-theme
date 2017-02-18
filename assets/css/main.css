@@ -5354,6 +5354,15 @@ table.hover tr:nth-of-type(even):hover {
     padding: .2rem 0px 0px 1rem;
     float: left; }
 
+pre {
+  margin: 0 0 1rem 3rem;
+  width: calc(100% - 3rem);
+  padding: 1rem;
+  font-size: .8rem; }
+  pre code {
+    margin: 0 5rem 0 0;
+    display: inline-block; }
+
 .author-profile-page__profile {
   margin: 0px 0px 1rem; }
   .author-profile-page__profile .author-image {
