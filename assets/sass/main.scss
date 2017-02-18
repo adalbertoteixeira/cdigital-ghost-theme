@@ -2110,6 +2110,8 @@ body:not(.post-template) .post-title {
 @import '../../node_modules/foundation-sites/scss/components/thumbnail';
 @import '../../node_modules/foundation-sites/scss/components/tooltip';
 
-@import '../../node_modules/motion-ui/motion-ui.scss';
+@import '../../node_modules/motion-ui/motion-ui';
 @import 'base/all';
 @import 'partials/all';
+
+@import './vendors/prism';

@@ -50,11 +50,11 @@
     font-family: Fruttiger,Verdana,Arial,sans-serif;
     font-size: 1.2rem;
     font-weight: bold;
-    margin: 1.5em 0px 0.5em 2em;
+    margin: 1.5em 0px 0.5em 0;
   }
   p {
     @include blog-text;
-    margin: 0 0 1em 3em;
+    margin: 0 0 1em 0;
     text-align: justify;
     line-height: 1.9em;
   }
@@ -89,12 +89,12 @@
 }
 
 pre {
-  margin: 0 0 1rem 3rem;
-  width: calc(100% - 3rem);
+  margin: 0 0 1rem 0;
+  // width: calc(100% - 3rem);
   padding: 1rem;
   font-size: .8rem;
   code {
-    margin: 0 5rem 0 0;
-    display: inline-block;
+    // margin: 0 5rem 0 0;
+    // display: inline-block;
   }
 }

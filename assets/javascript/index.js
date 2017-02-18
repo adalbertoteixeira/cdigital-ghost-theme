@@ -5,6 +5,12 @@
 
     $document.ready(function () {
 
+        $(document).foundation();
+
+        var orbit = new Foundation.Orbit($('.orbit--cdigital'), {
+          bullets: true,
+        });
+
         var $postContent = $(".post-content");
 
         $(".menu-button, .nav-cover, .nav-close").on("click", function(e){
@@ -12,5 +18,6 @@
             $("body").toggleClass("nav-opened nav-closed");
         });
 
+        
     });
 })(jQuery);

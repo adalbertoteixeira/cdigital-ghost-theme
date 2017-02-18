@@ -14,7 +14,9 @@ gulp.task('sass', function () {
         'node_modules/foundation-sites/scss',
         'node_modules/motion-ui/src'
       ]
-    }).on('error', sass.logError))
+    })
+    .pipe(sass({outputStyle: 'compressed'}))
+    .on('error', sass.logError))
     .pipe(gulp.dest('./assets/css'));
 });
  
