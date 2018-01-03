@@ -8,7 +8,7 @@
 {{#author}}
   <div class="row">
     <section class="author-profile-page__profile small-12 columns">
-        {{#if image}}
+        {{#if feature_image}}
         <figure class="author-image">
             <div class="img" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></div>
         </figure>
@@ -45,7 +45,7 @@
                           </h2>
                       </header>
                       <section class="post-excerpt">
-                        {{#if image}}
+                        {{#if feature_image}}
                           <div class="teasers-block--post--post-image--wrapper">
                             <a href="{{url}}" class="teasers-block--post--post-image--link" style="background-image: url({{image}});">
                             </a>
