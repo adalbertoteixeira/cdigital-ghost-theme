@@ -1,6 +1,12 @@
 {
-  "name": "distopia",
+  "name": "cdigital",
   "version": "1.0.0",
+  "author": {
+    "email": "adalbertosteixeira@gmail.com"
+  },
+  "config": {
+    "posts_per_page": 5
+  },
   "devDependencies": {
     "babel-preset-es2015": "^6.3.13",
     "browser-sync": "^2.10.0",
