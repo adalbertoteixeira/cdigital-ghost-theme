@@ -13,7 +13,7 @@
             <button class="orbit-previous" aria-label="previous"><span class="show-for-sr">Previous Slide</span>&#9664;</button>
             <button class="orbit-next" aria-label="next"><span class="show-for-sr">Next Slide</span>&#9654;</button>
             {{#foreach posts}}
-              <li class="{{#if @first}}is-active {{/if}}orbit-slide" style="background-image: url({{img_url}})">
+              <li class="{{#if @first}}is-active {{/if}}orbit-slide" style="background-image: url({{img_url feature_image}})">
                 <div class="orbit-slide__title">
                   <a href="{{slug}}">{{title}}</a>
                 </div>
@@ -57,8 +57,8 @@
                         <section class="post-excerpt">
                           {{#if feature_image}}
                             <div class="teasers-block--post--post-image--wrapper">
-                              <a href="{{slug}}" class="teasers-block--post--post-image--link" style="background-image: url({{img_url}});">
-                                {{!-- <img src="{{img_url}}" alt="{{title}}" class="teasers-block--post--post-image--image"> --}}
+                              <a href="{{slug}}" class="teasers-block--post--post-image--link" style="background-image: url({{img_url feature_image}});">
+                                {{!-- <img src="{{img_url feature_image}}" alt="{{title}}" class="teasers-block--post--post-image--image"> --}}
                               </a>
                             </div>
                           {{/if}}
